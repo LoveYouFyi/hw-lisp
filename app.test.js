@@ -1,37 +1,41 @@
 // Test with Jest
 const testStringParens = require("./app");
-//const testFileParens = require("./app");
+const testFileParens = require("./app");
 
 //
-// Lisp code testing from file import
-//
-// Test parens true
-//test("Text file with lisp code", () => {
-  //expect(testFileParens('code.lisp.txt').toBe(true));
-//});
-
-
-//
-// Initial testing with simple hard-coded strings
+// File imports testing of Lisp code
 //
 
-// Test parens true
-test("Parentheses check for equal number opening and closing", () => {
-  expect(testStringParens("((()))")).toBe(true);
+// Test parens true for file code.lisp.txt
+test("Test LISP code parens", () => {
+  expect(testFileParens.file("./code.lisp.txt")).toBe(true);
 });
 
-// Test parens true
-test("Parentheses check for equal number opening and closing", () => {
-  expect(testStringParens("( ( (()code check()) ) )")).toBe(true);
+// Test parens false for file code.lisp2.txt
+test("Test LISP code parens", () => {
+  expect(testFileParens.file("./code.lisp2.txt")).toBe(false);
 });
 
-// Test parens false
-test("Parentheses check for equal number opening and closing", () => {
-  expect(testStringParens("( ( ( ( ) (( ) ) )")).toBe(false);
+//
+// Hard-coded strings testing
+//
+
+// test true
+test("Test string parens", () => {
+  expect(testStringParens.string("((()))")).toBe(true);
 });
 
-// Test parens false 
-test("Parentheses check for equal number opening and closing", () => {
-  expect(testStringParens("( ( code ( ( ) (let this( ) be good ) )")).toBe(false);
+//// test true
+test("Test string parens", () => {
+  expect(testStringParens.string("( ( (()code check()) ) )")).toBe(true);
 });
 
+// test false
+test("Test string parens", () => {
+  expect(testStringParens.string("( ( ( ( ) (( ) ) )")).toBe(false);
+});
+
+// test false 
+test("Test string parens", () => {
+  expect(testStringParens.string("( ( code ( ( ) (let this( ) be good ) )")).toBe(false);
+});

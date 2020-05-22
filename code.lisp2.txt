@@ -28,7 +28,7 @@
 (eval-when (compile eval)
   (proclaim '(inline queue-next))
   (proclaim '(function queue-next (queue fixnum) fixnum))
-  )
+  )) // <-------------- extra paren
 
 
 (defun queue-next (queue ptr)
