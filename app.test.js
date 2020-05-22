@@ -1,5 +1,5 @@
 // Test with Jest
-const checkParens = require("./index");
+const checkParens = require("./app");
 
 // Test parens true
 test("Parentheses check for equal number of opening and closing parens", () => {
