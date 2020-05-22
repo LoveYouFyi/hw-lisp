@@ -1,6 +1,6 @@
 // Load text file and convert to string
 const fs = require('fs');
-const code = fs.readFileSync('code.lisp.txt').toString();
+
 
 //
 // Run App: 
@@ -20,7 +20,18 @@ const checkParens = (string) => {
   }, 0);
 }
 
+const testStringParens = string => {
+  return checkParens(string);
+}
 
-console.log(checkParens(code));
+//const testFileParens = file => {
+  //let test = fs.readFileSync(file).toString();
+  //console.log("test: ", test);
+  //return checkParens(test);
+//}
 
-module.exports = checkParens;
+
+module.exports = testStringParens;
+//module.exports = testFileParens;
+
+
