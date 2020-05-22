@@ -1,0 +1,22 @@
+{
+  "name": "lisp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveYouFyi/hw-lisp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoveYouFyi/hw-lisp/issues"
+  },
+  "homepage": "https://github.com/LoveYouFyi/hw-lisp#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

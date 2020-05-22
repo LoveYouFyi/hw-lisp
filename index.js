@@ -9,3 +9,5 @@ const checkParens = (string) => {
 console.log(checkParens("( ( ( ( ) (( ) ) )"));
 console.log(checkParens("( ( ) )"));
 console.log(checkParens("( ( (()()) ) )"));
+
+module.exports = checkParens
